@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@400;500&family=Oswald:wght@300;400;500;700&display=swap');
+
+
+:root{
+    --color1: #ff5c5c;
+    --color2: #ffffff;
+    --color3: #f5f5f5;
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    --border:.2rem solid #f5f5f5;
+    --outline:.1rem solid #f5f5f5;
+    --outline-hover:.2rem solid var(--black);
+    
+}
+
+*{ 
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+
+}
+
+html {
+    font-size: 65%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+
+}
+
+body {
+    background: rgba(212, 219, 249, 1);
+    height: auto;
+
+}
+
+section {
+    padding: 2rem 9%;
+
+}
+
+.heading {
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--black);
+
+}
+
+.heading span {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    background: #ff5c5c;
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    border-radius: 1.5rem;
+
+}
+
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid rgb(120, 110, 255);
+    color: var(--black);
+    cursor: pointer;
+    background:rgba(212, 219, 249, 1);
+    margin:0 .7rem;
+}
+
+.btn:hover{
+    background: rgb(120, 110, 255);
+    color: var(--color2);
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 8rem;
+    background: rgba(166, 177, 225, 1);
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:2rem 9%;
+    transition: all .2s linear;
+
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:  var(--color2);
+
+}
+
+.header .logo i{
+    color: var(--color1);
+
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin: 0 2.5rem;
+    color: var(--color2);
+
+}
+
+.header .navbar a:hover{
+    color:rgba(66, 72, 116, 1);
+    
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: rgba(166, 177, 225, 1);
+    color: var(--black);
+    font-size: 2rem;
+    margin-left: 3rem;
+    text-align: center;
+
+}
+
+.header .icons div:hover{
+    background: rgba(66, 72, 116, 1);
+    color: var(--color2);
+    cursor: pointer;
+
+}
+
+#menu-bth{
+    display: none;
+
+}
+
+/* search start */
+
+.header .search-form{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 4.5rem;
+    background: rgba(166, 177, 225, 1);
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+
+}
+
+.header .search-form.active{
+    right: 2rem;
+    transition: .4s;
+
+}
+
+.header .search-form input{
+    width: 100%;
+    height: 100%;
+    padding:0 1.5rem;
+    font-size: 1.6rem;
+    background: none;
+    text-transform: none;
+    color: var(--black);
+
+}
+
+.header .search-form label{
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+
+}
+
+.header .search-form label:hover{
+    color: var(--color1);
+
+}
+
+/* search end */
+
+/* shopping cart start */
+.header .shopping-cart{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 40rem;
+    background: rgba(212, 219, 249, 1);
+
+}
+
+.header .shopping-cart.active{
+    right: 2rem;
+    transition: .4s linear;
+
+}
+
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+
+}
+
+.header .shopping-cart .box img{
+    height: 10rem;
+
+}
+
+.header .shopping-cart .box .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    cursor: pointer;
+    color: var(--light-color);
+    transform: translateY(-50%);
+
+}
+
+.header .shopping-cart .box .fa-trash:hover{
+    color: var(--color1);
+
+}
+
+.header .shopping-cart .box .content h3{
+    color: var(--black);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+
+}
+
+.header .shopping-cart .box .content span{
+    color: var(--light-color);
+    font-size: 1.2rem;
+
+}
+
+.header .shopping-cart .box .content .quantity{
+    padding-left: 1rem;
+
+}
+
+.header .shopping-cart .total{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--black);
+
+}
+
+.header .shopping-cart .btn{
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* shopping cart end */
+
+/* login start */
+
+.header .login-form{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 40rem;
+    background: rgba(166, 177, 225, 1);
+    border-radius: .5rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+
+}
+
+.header .login-form.active{
+    right: 2rem;
+    transition: .4s linear;
+    
+}
+
+.header .login-form h3{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--black);
+
+}
+
+.header .login-form .input-box{
+    width: 100%;
+    margin:.7rem 0;
+    background: #fff;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+
+}
+
+.header .login-form a{
+    font-size: 1.2rem;
+    color: var(--black);
+    padding: 1rem 0;
+    display: block;
+    text-align: right;
+
+}
+
+/* login end */
+
+/* book list start */
+
+.box-container{
+    display: border-box;
+    gap: 2rem;
+    margin: 2rem 0;
+
+}
+
+/* book list end */
+
+/* media queries start */
+
+@media (max-width: 1600px){
+    html {
+        font-size: 55%;  
+    }  
+    .header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width: 1200px){
+    .header .navbar a{
+        margin: 0 1.5rem;
+    }
+    .header .icons div{
+        margin-left: 2rem;
+    }
+
+}
+
+@media (max-width: 1100px){
+    .header .navbar a{
+        margin: 0 1rem;
+    }
+    .header .icons div{
+        margin-left: 1.5rem;
+    }
+
+}
+
+@media (max-width: 1000px){
+    #menu-bth{
+        display: inline-block;
+    }
+
+    .header .search-form{
+        width: 90%;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 110%; 
+        right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: 5rem;
+        background: rgba(166, 177, 225, 1);
+        padding: 2rem;
+    }
+
+    .header .navbar a{
+        display: block;
+        margin: 2rem 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .header .navbar.active{
+        right: 2rem;
+        transition: .4s linear;
+    }
+}
+
+/* media queries end */
+
+.new{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:url(https://www.phoenixnext.com/pub/media/banner/tmp/_M_Mishiranu_EC.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 17rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8.5rem;
+    width: 95%;
+
+}
+
+.new .content{
+    text-align: center;
+    width: 60rem;
+
+}
+
+.new .content h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    padding-bottom: 1rem;
+
+}
+
+.new .content h3 span{
+    color: var(--color1);
+
+}
+
+.new .content p{
+    font-size: 1rem;
+    color: #fff;
+    padding-bottom: 1rem;
+
+}

@@ -1,0 +1,11 @@
+<div>
+  <a href="..">test</a>
+</div>
+-----------------------
+a:link {
+  color: blue;
+}
+
+a:hover {
+  color: red;
+}

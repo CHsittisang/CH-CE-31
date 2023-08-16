@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-page my web</title>
+    <link rel="stylesheet" href="/css/home-page.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <hw class="logo-icon"><a href="">My-Web</a></hw>
+        <nav class="navigation">
+            <a class="nav-tab" href="#A1" id="">INTRO</a>
+            <a class="nav-tab" href="#g1" id="">MEMBER</a>
+            <a class="nav-tab" href="#g2" id="">IMAGE</a>
+            <a class="nav-tab" href="#outtro" id="">CONTACT</a>
+            <button class="login-menu-btn">Login</button>
+        </nav>
+    </header>
+    <!-- header end -->
+
+
+
+    <div class="parallax_warpper" id="intro">
+        <div class="intro-screen" id="A1">
+
+    <!-- text test -->
+        <p class="intro">
+            We hope to get good grades.
+            <span class="text-intro">
+                Welcome to my web.
+            </span>
+            - group 5 -
+        </p>
+
+        <!-- login and register form -->
+
+            <div class="popup">
+                <div class="wapper">
+
+                    <!-- login -->
+
+                    <div class="login-form">
+                        <form action="">
+                            <h3>Login</h3>
+                            <span>Email<ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="email" name="" placeholder="enter your email" id="" class="box">
+
+                            <span>Password<ion-icon name="lock-closed-outline"></ion-icon></span>
+                            <input type="password" name="" placeholder="enter your password" id="" class="box">
+
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="remember-me">
+                                <label for="remember-me">remember me</label>
+                                <a href="#">Forget password ?</a>
+                            </div>
+
+                            <input type="submit" value="Login" class="btn">
+
+                            <div class="create">
+                                <p>Don't have an account ?<a href="#" class="registerLink" >Register</a></p>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- register -->
+
+                    <div class="register-form">
+
+                        <form action="">
+                            <h3>register</h3>
+                            
+                            <span>Username<ion-icon name="person-outline"></ion-icon></span>
+                            <input type="email" name="" placeholder="enter your email" id="" class="box">
+                            
+                            <span>Email<ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="email" name="" placeholder="enter your email" id="" class="box">
+
+                            <span>Password<ion-icon name="lock-closed-outline"></ion-icon></span>
+                            <input type="password" name="" placeholder="enter your password" id="" class="box">
+
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="remember-me">
+                                <label for="remember-me">I agreet to the terms and conditions</label>
+                            </div>
+
+                            <input type="submit" value="Register" class="btn">
+
+                            <div class="create">
+                                <p>already have an account.<a href="#" class="loginLink">Login</a></p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <ion-icon name="close-circle-outline" class="close"></ion-icon>
+
+                </div>
+            </div>
+    <!-- login and register form end -->
+        </div>
+
+        <div class="none"></div>
+
+        <div class="parallax-g" id="g1">
+            <div class="parallax-l no1">
+                <div class="member-name">
+                    
+                    <h2>- Veerapod Chuchat -</h2>
+                    <h2>- Wirphat Prasomphong -</h2>
+                    <h2>- Thiraphat Suksamosorn -</h2>
+                    <h2>- Pitcahyut Muangwonk -</h2>
+                    <h2>- Chanakan Sittisangumpai -</h2>
+                    <h2>- Thongtae Sirimak -</h2>
+                    
+
+                </div>
+
+            </div>
+            <div class="parallax-l no2"></div>
+        </div>
+
+        <div class="none"></div>
+
+        <div class="parallax-g" id="g2">
+            <div class="parallax-l no2"></div>
+            <div class="parallax-l no3">
+                A
+
+            </div>
+        </div>
+
+        <div class="none"></div>
+        
+        <div class="outro-screen" id="outtro">
+        <?php
+            $user = "root";
+            $pass = "";
+            $db = "cloud";
+
+            $conn = new mysqli('localhost',$user,$pass,$db) or die("Unable to connect");
+
+            $sql = "SELECT id , m_name FROM member";
+            $resault = mysqli_query($conn,$sql);
+
+            if($res = mysqli_query($conn,$sql)){
+                if(mysqli_num_rows($res) > 0){
+                    echo "<table>";
+                        echo "<tr>";
+                            echo "<th>Id</th>";
+                            echo "<th>Name</th>";
+                        echo "</tr>";
+                    while($row = mysqli_fetch_array($res)){
+                        echo "<tr>";
+                            echo "<td>" . $row['id'] . "</td>";
+                            echo "<td>" . $row['m_name'] . "</td>";
+                        echo "</tr>";
+                    }
+                    echo "</table>";
+                }
+                else{
+                    echo "No records matching your query were found.";
+                }
+            }
+            else{
+                echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+            }
+        mysqli_close($conn);
+        ?>
+        </div>
+    </div>
+
+
+    <script src="/js/home-page.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

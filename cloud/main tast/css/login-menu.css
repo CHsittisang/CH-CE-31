@@ -1,0 +1,113 @@
+.html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url(https://wallpapers.com/images/featured/lo-fi-mvqzjym6ie17firw.jpg)no-repeat;
+}
+
+
+.login-form-container{
+    background-color: #ffffff9f;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 0 .5rem .7rem rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    padding: 2rem;
+    width: 30rem;
+    height: 33rem;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-form-container form h3{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    color: #000000;
+
+}
+.login-form-container form span{
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.login-form-container form .box{
+    width: 25rem;
+    height: 3rem;
+    border: 1px solid #c0c0c0;
+    border-radius: 2rem;
+    padding: 0 1rem;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 200;
+    color: #000000;
+}
+.login-form-container form .checkbox{
+    margin-left: -0.5rem ;
+}
+
+.login-form-container form .checkbox label{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: .5rem;
+}
+
+.login-form-container form .checkbox a{
+    margin-left: 4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer; 
+    transition: 0.5s;
+
+}
+
+
+.login-form-container .checkbox input{
+    margin-left: 2rem;
+    width: 1rem;
+}
+
+.btn{
+    width: 20rem;
+    height: 3rem;
+    border: 1px solid #c0c0c0;
+    border-radius: 2rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000000;
+    background-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: #000000;
+}
+
+.login-form-container form .create{
+    display: flex;
+    margin-top:1rem;
+    justify-content: center;
+}
+
+.login-form-container form .create a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.login-form-container form a:hover{
+    color: #ff0000;
+}

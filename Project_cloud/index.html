@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-page my web</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <hw class="logo-icon"><a href="">My-Web</a></hw>
+        <nav class="navigation">
+            <a class="nav-tab" href="#A1" id="">INTRO</a>
+            <a class="nav-tab" href="#g1" id="">MEMBER</a>
+            <a class="nav-tab" href="#g2" id="">IMAGE</a>
+            <a href="#A1"><button class="login-menu-btn">Login</button></a>
+        </nav>
+    </header>
+    <!-- header end -->
+
+
+
+    <div class="parallax_warpper" id="intro">
+        <div class="intro-screen" id="A1">
+
+    <!-- text test -->
+        <p class="intro">
+            We hope to get good grades.
+            <span class="text-intro">
+                Welcome to my web.
+            </span>
+            - group 5 -
+        </p>
+
+        <!-- login and register form -->
+
+            <div class="popup">
+                <div class="wapper">
+
+                    <!-- login -->
+
+                    <div class="login-form">
+                        <form action="check_login.php" method="post">
+                            <h3>Login</h3>
+                            <span>Email<ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="email" name="m_email" placeholder="enter your email" id="" class="box" required>
+
+                            <span>Password<ion-icon name="lock-closed-outline"></ion-icon></span>
+                            <input type="password" name="m_pwd" placeholder="enter your password" id="" class="box" required>
+
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="remember-me">
+                                <label for="remember-me">remember me</label>
+                                <a href="fail.html">Forget password ?</a>
+                            </div>
+
+                            <input type="submit" value="Login" class="btn">
+
+                            <div class="create">
+                                <p>Don't have an account ?<a href="#" class="registerLink" >Register</a></p>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- register -->
+
+                    <div class="register-form">
+
+                        <form action="register.php" method="post">
+                            <h3>register</h3>
+                            
+                            <span>Name<ion-icon name="person-outline"></ion-icon></span>
+                            <input type="text" name="m_name" placeholder="enter your name" id="" class="box" required>
+                            
+                            <span>Email<ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="email" name="m_email" placeholder="enter your email" id="" class="box" required>
+
+                            <span>Password<ion-icon name="lock-closed-outline"></ion-icon></span>
+                            <input type="password" name="m_pwd" placeholder="enter your password" id="" class="box" required>
+
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="remember-me">
+                                <label for="remember-me">I agreet to the terms and conditions</label>
+                            </div>
+
+                            <input type="submit" value="Register" class="btn">
+
+                            <div class="create">
+                                <p>already have an account.<a href="#" class="loginLink">Login</a></p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <ion-icon name="close-circle-outline" class="close"></ion-icon>
+
+                </div>
+            </div>
+    <!-- login and register form end -->
+        </div>
+
+        <div class="none"></div>
+
+        <div class="parallax-g" id="g1">
+            <div class="parallax-l no1">
+                <div class="member-name">
+                    
+                    <h2>- Veerapod Chuchat -</h2>
+                    <h2>- Wirphat Prasomphong -</h2>
+                    <h2>- Thiraphat Suksamosorn -</h2>
+                    <h2>- Pitcahyut Muangwonk -</h2>
+                    <h2>- Chanakan Sittisangumpai -</h2>
+                    <h2>- Thongtae Sirimak -</h2>
+                    
+
+                </div>
+
+            </div>
+            <div class="parallax-l no2"></div>
+        </div>
+
+        <div class="none"></div>
+
+        <div class="parallax-g" id="g2">
+            <div class="parallax-l no2">
+            <h2></h2>
+            </div>
+
+            <div class="parallax-l no3">
+                <!-- Nook img-->
+                <div class="gallery">
+                    <img src="img/headache.jpg"  height="150">
+                    <div class="desc">Nook</div>
+                    <div class="desc">65015144</div>
+                </div>
+
+                <!-- Safe img-->
+                <div class="gallery">
+                    <img src="img/sff.jpg"  height="150">
+                    <div class="desc">Safe</div>
+                    <div class="desc">65015143</div>
+                </div>
+
+                <!-- Pai img-->
+                <div class="gallery">
+                    <img src="img/dog_sea.jpg"  height="150">
+                    <div class="desc">Pai</div>
+                    <div class="desc">65015077</div>
+                </div>
+                
+                <!-- Tiger img-->
+                <div class="gallery">
+                    <img src="img/tuling.jpg"  height="150">
+                    <div class="desc">Tiger</div>
+                    <div class="desc">65015106</div>
+                </div>
+
+                <!-- IT img-->
+                <div class="gallery">
+                    <img src="img/it.jpg"  height="150">
+                    <div class="desc">IT</div>
+                    <div class="desc">65015028</div>
+                </div>
+
+                <!-- Jeak img-->
+                <div class="gallery">
+                    <img src="img/jeak.jpg"  height="150">
+                    <div class="desc">Jeak</div>
+                    <div class="desc">65015057</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="none"></div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

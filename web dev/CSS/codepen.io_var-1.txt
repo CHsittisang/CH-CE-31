@@ -1,0 +1,33 @@
+<body>
+
+<h1>This is a Heading</h1>
+<div>
+<div role="group">
+<input type="button" class="btn red" value="Button RED">
+<input type="button" class="btn grn" value="Button GREEN">
+<input type="button" class="btn blu" value="Button BLUE">
+</div>
+</div>
+<div>
+<input type="text" class="tex blu">
+</div>
+
+</body>
+----------------------
+:root {
+  --red: red;
+  --green: lime;
+  --blue: blue;
+}
+.red {
+  color: var(--red);
+}
+.grn {
+  color: var(--green);
+}
+.blu {
+  color: var(--blue);
+}
+.btn:hover {
+  color: plum;
+}

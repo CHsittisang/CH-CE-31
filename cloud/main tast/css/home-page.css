@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DynaPuff';
+    scroll-behavior: smooth;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    cursor: default;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 1.25rem 8rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+    background-color: #1b1b1b;
+}
+
+.logo-icon a{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 2rem;
+    transition: .5s;
+}
+
+.logo-icon a:hover{
+    color: #000000;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration:none;
+    margin-left: 2.5rem;
+    transition: .5s;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: .25rem;
+    border-radius: 50rem;
+    background: #ff0000;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scale(1);
+}
+
+.navigation a:hover{
+    color: #ff0000;
+}
+
+.navigation .login-menu-btn{
+    background: transparent;
+    width: 10rem;
+    height: 3rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 2rem ;
+    border: .2rem solid #fff;
+    text-align: center;
+    transition: .5s;
+}
+
+.navigation .login-menu-btn:hover{
+    background: #fff;
+    color: #000;
+}
+
+.popup{
+    display: none;
+    transform: scale(10px);
+    transition: height 5s ease;
+}
+
+.popup.active{
+    display: flex;
+    transform: scale(10px);
+    transition: height 5s ease;
+}
+
+.wapper{
+    position: relative;
+    background-color: #ffffff9f;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 0 .5rem .7rem rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    padding: 2rem;
+    width: 30rem;
+    height: 34rem;
+    backdrop-filter: blur(2px);
+    transition:.2s ;
+    
+}
+
+.wapper.active{
+    height: 41rem;
+}
+
+.close{
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 2.5rem;
+    color: #000000;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.close:hover{
+    color: #ff0000;
+}
+
+.wapper .login-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .5s;
+}
+
+.wapper .register-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .5s;
+}
+
+.wapper.active .login-form{
+    display: none;
+    transition: transform .5s;
+}
+
+.wapper.active .register-form{
+    display: flex;
+    transition: transform .5s;
+}
+
+form h3{
+    display: absolute;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    color: #000000;
+
+}   
+form span{
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 600;
+    justify-content: space-between;
+}
+
+form ion-icon{
+    color: #000000;
+    width: 2rem;
+    height: 1.5rem;
+    margin-right: 2rem;
+}
+
+form .box{
+    width: 25rem;
+    height: 3rem;
+    border: 1px solid #c0c0c0;
+    background: #ffffff5b;
+    border-radius: 2rem;
+    padding: 0 1rem;
+    margin-top: .5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+    font-weight: 200;
+    color: #000000;
+}
+form .checkbox{
+    margin-left: -0.5rem ;
+}
+
+form .checkbox label{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: .5rem;
+}
+
+form .checkbox a{
+    margin-left: 4rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer; 
+    transition: 0.3s;
+
+}
+
+
+.checkbox input{
+    margin-left: 2rem;
+    width: 1rem;
+}
+
+.btn{
+    width: 20rem;
+    height: 3rem;
+    border: 1px solid #c0c0c0;
+    border-radius: 2rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000000;
+    background-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: #000000;
+}
+
+form .create{
+    margin-top:1rem;
+    justify-content: center;
+}
+
+form .create p{
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    cursor: default;
+    transition: 0.3s;
+}
+
+form .create a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: .5rem;
+}
+
+form a:hover{
+    color: #ff0000;
+}
+
+.parallax_warpper::-webkit-scrollbar {
+    display: none;
+}
+
+.parallax_warpper{
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 300px;
+}
+
+.parallax_warpper .intro-screen{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(https://i.pinimg.com/originals/1d/26/c5/1d26c5b022c071fb8f1e3ae2f0f65ba9.gif)no-repeat;
+    background-size: cover;
+}
+
+.parallax_warpper .outro-screen{
+    height: 100vh;
+    background-color: #000018;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax_warpper .parallax-g{
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+
+.parallax_warpper .parallax-l {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax_warpper .no1{
+    transform: translateZ(-300px) scale(2);
+}
+
+.parallax_warpper .no2{
+    transform: translateZ(0);
+}
+
+.parallax_warpper .no3{
+    transform: translateZ(210px) scale(0.4);
+    
+}
+
+#intro{
+    z-index: 0;
+}
+
+#g1{
+    z-index: -1;
+}
+
+#g1 > .no1{
+    background-color: #000018;
+}
+
+#g2 > .no2{
+    background: url(https://i.pinimg.com/originals/1d/26/c5/1d26c5b022c071fb8f1e3ae2f0f65ba9.gif)no-repeat;
+    background-size: cover;
+}
+
+.intro {
+    font-weight: 600;
+    font-family: 'Neuton', serif;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+	letter-spacing: .5em;
+	display: inline-block;
+	border: 4px double rgba(255,255,255,.25);
+	border-width: 4px 0;
+	padding: 1.5em 0em;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	width: 40em;
+	margin: 0 0 0 -20em;
+}
+
+.intro .text-intro {
+    font-weight: 600;
+	font-size: 5rem;
+    font-family: 'Neuton', serif;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+/* Clip Background Image */
+
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+/* Animate Background Image */
+
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+
+}
+
+@-webkit-keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+
+.none{
+    background: #fff;
+    display: flex;
+    width: 100vw;
+    height: 2vh;
+}
+.member-name h2{
+    font-family: 'Neuton', serif;
+	font-weight: 900;
+	font-size: 1.2rem;
+	letter-spacing: 5px;
+	color: white;
+	display: flex;
+    justify-content: center;
+    margin: 5rem;
+    border: 4px double rgba(255,255,255,.25);
+	border-width: 4px 0;
+    padding: 1em 0em;
+}
+
+

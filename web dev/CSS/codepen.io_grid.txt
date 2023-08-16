@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="item1">
+    item01
+  </div>
+  <div class="item2">
+    item02
+  </div>
+  <div class="item3">
+    item03
+  </div>
+  <div class="item4">
+    item04
+  </div>
+  <div class="item5">
+    item05
+  </div>
+  <div class="item6">
+    item06
+  </div>
+  <div class="item7">
+    item07
+  </div>
+  <div class="item8">
+    item08
+  </div>
+  <div class="item9">
+    item09
+  </div>
+  <div class="item10">
+    item10
+  </div>
+</div>
+-----------------------
+.container {
+  display: grid; 
+}
+.item1 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.item2 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+.item3 {
+  grid-column-start: 3;
+  grid-row-start: 5;
+}

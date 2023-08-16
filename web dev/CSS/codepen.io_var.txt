@@ -1,0 +1,21 @@
+<div>
+  test
+  <div class="x">
+    child
+  </div>
+  <div class="y">
+    another child
+  </div>
+</div>
+-----------------------
+div {
+  --color: red;
+  background-color: var(--color);
+}
+.x {
+  --color: blue;
+  /*color: var(--color);*/
+}
+.y {
+  --color: lime;
+}
