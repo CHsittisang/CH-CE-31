@@ -37,14 +37,14 @@ class Node:
             res = res + self.preorderTraversal(root.left)
             res = res + self.preorderTraversal(root.right)
         return res
-    def postorderTraversal(self, root):
+    def breadth_first(self, root, lv=0):
         res = []
         if root:
-            res = self.postorderTraversal(root.left)
-            res = res + self.postorderTraversal(root.right)
-            res.append(root.data)
-        return res
-
+            res.append(f"{root.data} is in level {lv}")
+            res = res + self.breadth_first(root.left, lv+1)
+            res = res + self.breadth_first(root.right, lv+1)
+        return res 
+        
 
 box = [15,3,16,9,23,11,7,5,34,19,2]
 root = Node(15)
@@ -53,6 +53,5 @@ for i in box:
 print("Tree is :",root.printTree()) 
 print("In-order is :",root.inorderTraversal(root))
 print("Pre-order is :",root.preorderTraversal(root))
-print("Post-order is :",root.postorderTraversal(root))
-
-#aaaaaaaaaaaaaaa
+for j in root.breadth_first(root):
+    print(j)
