@@ -1,0 +1,40 @@
+.S-button{
+
+    background-color:rgb(255, 255, 255);
+    border: 1px solid #9c9c9c;
+    border-radius: 5rem;
+    color: black;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 5px;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    border: 1px solid #ebebeb;
+    box-shadow:   0 3px 7px 1px #bfbfbf;
+    transition: .9s ease-in-out; 
+    
+}
+
+.S-button:hover{
+    color: #ff0000;
+    border: 1px solid #ebebeb;
+    box-shadow: inset 0 0 5px 1.5px #bfbfbf;
+    transform: scale(90%);
+    transition: .5s ;
+
+
+}
+
+.bg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #eeeeee;
+    border-radius: 5px;
+    padding: 1% 1%;
+    margin: 5% 5%;
+    box-shadow:   0 3px 10px 5px #d3d3d3;
+}
